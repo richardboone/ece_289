@@ -9,11 +9,15 @@ t = my_data.time;
 
 ang = my_data.signals.values(:,1);
 des = my_data.signals.values(:,2);
+cvel = my_data.signals.values(:,3);
+ang2 = my_data.signals.values(:,4);
 
 figure(11); clf
 plot(t,des,'b-');
 hold on
 plot(t,ang,'r.');
+hold on
+plot(t,cvel,'g-');
 legend('My Trajectory','Motor Angle (rad)')
 title('From: plotting\_script\_example.m')
 xlabel('Time (s)')
